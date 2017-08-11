@@ -2,21 +2,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { ArticuloComponent } from './articulo/articulo.component';
 import { ListaArticuloComponent } from './lista-articulo/lista-articulo.component';
+import { MenusocialComponent } from './menusocial/menusocial.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticuloComponent,
-    ListaArticuloComponent
+    ListaArticuloComponent,
+    MenusocialComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

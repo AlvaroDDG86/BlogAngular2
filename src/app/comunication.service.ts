@@ -1,5 +1,6 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { Articulo } from './articulo';
+import { Comentario } from './comentario';
 
 //El servicio es el encargado de adminitrar los datos a los diferentes componentes, 
 //todas las funciones declaradas aquí, se ejecutarán donde se importe el servicio.
@@ -7,18 +8,32 @@ import { Articulo } from './articulo';
 export class ComunicationService {
   public emitter = new EventEmitter();
 
-  public articulos: Articulo[] = [
-
-    { titulo: '11', descripcion: 'Mr. Nice'},
-    { titulo: '12', descripcion: 'Narco'},
-    { titulo: '13', descripcion: 'Bombasto'},
-    { titulo: '14', descripcion: 'Celeritas'},
-    { titulo: '15', descripcion: 'Magneta'}
+  public comentarios: Comentario[] = [
+    { autor: 'Manolo', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: '01/01/2017'},
+    { autor: 'Luis', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: '11/03/2017'},
+    { autor: 'María', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: '23/06/2017'}
+  ]
+  
+  public social =[
+    {enlace:'http://www.facebook.com',icono:'fa fa-facebook-square'},
+    {enlace:'http://www.linkedin.com',icono:'fa fa-twitter-square'},
+    {enlace:'http://www.twitter.com',icono:'fa fa-linkedin-square'},
+    {enlace:'http://www.instagram.com',icono:'fa fa-instagram'}
   ];
+
+  public articulos: Articulo[];
   public selected: Articulo;
 
   constructor() { 
-    this.selected = this.getLastArticulo()
+    this.articulos = [
+     {titulo:'Artículo 1', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.', comentarios :this.comentarios},
+     {titulo:'Artículo 2', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.', comentarios :this.comentarios},
+     {titulo:'Artículo 3', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.', comentarios :this.comentarios},
+     {titulo:'Artículo 4', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.', comentarios :this.comentarios},
+     {titulo:'Artículo 5', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.', comentarios :this.comentarios},
+     {titulo:'Artículo 6', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.', comentarios :this.comentarios}
+    ];
+    this.selected = this.getLastArticulo();
   }
 
   getArticulos(){
@@ -47,4 +62,7 @@ export class ComunicationService {
     this.emitter.emit(this.selected);
   }
 
+  getListaSocial(){
+    return this.social;
+  }
 }

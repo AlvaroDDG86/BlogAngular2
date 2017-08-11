@@ -1,0 +1,13 @@
+.titulo{
+    font-size: 5em;
+    color:red;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding: 1em;
+    margin-top:0 !important; 
+}
+#cabecera{
+    background: url(/assets/img/bg.jpg);
+    background-size:cover;
+    background-color: lightblue;
+}

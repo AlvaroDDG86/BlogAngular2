@@ -1,5 +1,14 @@
-<div class="content">
-  {{title}}
-  <app-articulo></app-articulo>
-  <app-lista-articulo></app-lista-articulo>
+<div class="container">
+  <div id="cabecera">
+      <app-menusocial></app-menusocial>
+      <h1 class="titulo">{{title}}</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-9">
+      <app-articulo></app-articulo>
+    </div>
+    <div class="col-md-3">
+      <app-lista-articulo></app-lista-articulo>
+    </div>
+  </div>
 </div>

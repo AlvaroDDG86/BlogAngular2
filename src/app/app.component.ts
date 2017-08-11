@@ -17,5 +17,5 @@ export class AppComponent {
   constructor(private _service: ComunicationService){
     
   }
-  title = 'El puto blog';
+  title = 'Let\s Travel!';
 }

@@ -1,7 +1,10 @@
- <ul>
+<div class="lateral">
+  <ul style="list-style-type: none;">
     <li *ngFor="let articulo of articulos">
-      <div (click)=onSelect(articulo)>
-        <span >{{articulo.titulo}}</span> {{articulo.descripcion}}
+      <div >
+        <h3 (click)=onSelect(articulo) class="enlace">{{articulo.titulo}}</h3>
+        <p>{{articulo.descripcion}}</p>
       </div>
     </li>
   </ul>
+</div> 

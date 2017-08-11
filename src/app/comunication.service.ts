@@ -18,7 +18,9 @@ export class ComunicationService {
     {enlace:'http://www.facebook.com',icono:'fa fa-facebook-square'},
     {enlace:'http://www.linkedin.com',icono:'fa fa-twitter-square'},
     {enlace:'http://www.twitter.com',icono:'fa fa-linkedin-square'},
-    {enlace:'http://www.instagram.com',icono:'fa fa-instagram'}
+    {enlace:'http://www.instagram.com',icono:'fa fa-instagram'},
+    {enlace:'http://www.vibeo.com',icono:'fa fa-vimeo-square'},
+    {enlace:'http://www.youtube.com',icono:'fa fa-youtube-square'}
   ];
 
   public articulos: Articulo[];

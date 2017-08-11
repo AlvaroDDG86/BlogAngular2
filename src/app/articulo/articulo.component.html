@@ -9,19 +9,17 @@
         </p>
       </div>
       <div class="panel-footer">
+        <h3>Comentarios:</h3>
         <ul style="list-style-type: none;">
           <li *ngFor="let comentario of selected.comentarios" >
             <div>
               <h4>
-                Escrito por: {{comentario.autor}}
+                El {{comentario.fecha}}, <strong>{{comentario.autor}}</strong> dijo: 
               </h4>
               <p>
                 {{comentario.contenido}}                
-              </p>
-              <strong>
-                Publicado el {{comentario.fecha}}
-              </strong>
-                            
+              </p>       
+              <hr />   
             </div>
           </li>
         </ul>

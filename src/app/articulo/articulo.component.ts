@@ -18,4 +18,7 @@ export class ArticuloComponent implements OnInit {
   ngOnInit() {
   }
 
+  agregarComentario(){
+    
+  }
 }

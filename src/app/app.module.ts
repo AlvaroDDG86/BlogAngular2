@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { NuevoArticuloComponent } from './nuevo-articulo/nuevo-articulo.component';
 import { routing } from './app.routing';
 import { NavbarComponent } from './navbar/navbar.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     MenusocialComponent,
     AboutComponent,
     NuevoArticuloComponent,
-    NavbarComponent
+    NavbarComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,

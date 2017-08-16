@@ -1,6 +1,5 @@
 .social{
-    position: fixed;
-    right: 10%;
+    position: relative;
     z-index: 10000;
 }
 i{

@@ -14,8 +14,9 @@ import { Articulo } from './articulo';
 })
 
 export class AppComponent {
+  public articulo: Articulo;
   constructor(private _service: ComunicationService){
-    
+    this.articulo = _service.getLastArticulo();
   }
   title = 'Let\s Travel!';
 }

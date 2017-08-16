@@ -7,12 +7,6 @@ import { Comentario } from './comentario';
 @Injectable()
 export class ComunicationService {
   public emitter = new EventEmitter();
-
-  public comentarios: Comentario[] = [
-    { autor: 'Manolo', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: '01/01/2017'},
-    { autor: 'Luis', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: '11/03/2017'},
-    { autor: 'María', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: '23/06/2017'}
-  ]
   
   public social =[
     {enlace:'http://www.facebook.com',icono:'fa fa-facebook-square'},
@@ -23,19 +17,31 @@ export class ComunicationService {
     {enlace:'http://www.youtube.com',icono:'fa fa-youtube-square'}
   ];
 
-  public articulos: Articulo[];
-  public selected: Articulo;
+  public articulos: Articulo[] = [
+     {titulo:'Artículo 1', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.', 
+     comentarios :[
+      { autor: 'Manolo', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: new Date(2017,5,18,20,30)}
+    ]},
+     {titulo:'Artículo 2', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.', 
+     comentarios :[
+        { autor: 'Fermín', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: new Date(2015,6,8,19,30)},
+        { autor: 'Germán', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: new Date(2016,2,4,10,13)},
+        { autor: 'Luisa', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: new Date(2013,5,1,11,2)}
+      ]
+    },
+     {titulo:'Artículo 3', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',
+     comentarios :[
+        { autor: 'Teresa', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: new Date(2017,0,8,12,0)},
+        { autor: 'Álvaro', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: new Date(2017,2,1,10,30)}
+      ]},
+     {titulo:'Artículo 4', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.', 
+    comentarios :[
+        { autor: 'Jacinto', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: new Date(2013,5,18,20,30)},
+        { autor: 'Lorena', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: new Date(2014,6,8,10,30)}
+      ]
+    }];
 
   constructor() { 
-    this.articulos = [
-     {titulo:'Artículo 1', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.', comentarios :this.comentarios},
-     {titulo:'Artículo 2', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.', comentarios :this.comentarios},
-     {titulo:'Artículo 3', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.', comentarios :this.comentarios},
-     {titulo:'Artículo 4', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.', comentarios :this.comentarios},
-     {titulo:'Artículo 5', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.', comentarios :this.comentarios},
-     {titulo:'Artículo 6', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.', comentarios :this.comentarios}
-    ];
-    this.selected = this.getLastArticulo();
   }
 
   getArticulos(){
@@ -46,22 +52,6 @@ export class ComunicationService {
   getLastArticulo(){
     console.log('getLastArticulo');
     return this.articulos[0];
-  }
-
-  getArticulo(){
-    console.log('getArticulo');
-    return this.selected;
-  }
-
-  setArticulo(articulo: Articulo){
-    console.log('setArticulo');
-    this.selected = articulo;
-  }
-
-  setSelected(articulo: Articulo){
-    this.setArticulo(articulo);
-    console.log('emitiendo...');
-    this.emitter.emit(this.selected);
   }
 
   getListaSocial(){

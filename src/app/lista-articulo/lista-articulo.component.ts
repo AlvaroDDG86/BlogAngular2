@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { ComunicationService } from '../comunication.service';
 import { Articulo } from '../articulo';
 
@@ -8,13 +8,16 @@ import { Articulo } from '../articulo';
   selector: 'app-lista-articulo',
   templateUrl: './lista-articulo.component.html',
   styleUrls: ['./lista-articulo.component.css'],
-  providers: [ComunicationService]
+  providers: [ComunicationService],
+  outputs: ['articuloChanged']
 })
 
 export class ListaArticuloComponent implements OnInit {
   public articulos: Articulo[];
+  articuloChanged = new EventEmitter<Articulo>();
   constructor(private _service: ComunicationService) {
     
+
   }
 
   ngOnInit() {
@@ -23,6 +26,6 @@ export class ListaArticuloComponent implements OnInit {
   }
 
   onSelect(articulo: Articulo){
-    this._service.setSelected(articulo);
+    this.articuloChanged.emit(articulo);
   }
 }

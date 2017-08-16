@@ -14,7 +14,7 @@
           <li *ngFor="let comentario of selected.comentarios" >
             <div>
               <h4>
-                El {{comentario.fecha}}, <strong>{{comentario.autor}}</strong> dijo: 
+                El {{comentario.fecha | date:'short'}}, <strong>{{comentario.autor}}</strong> dijo: 
               </h4>
               <p>
                 {{comentario.contenido}}                

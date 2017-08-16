@@ -5,10 +5,10 @@
   </div>
   <div class="row">
     <div class="col-md-9">
-      <app-articulo></app-articulo>
+      <app-articulo [selected]="articulo"></app-articulo>
     </div>
     <div class="col-md-3">
-      <app-lista-articulo></app-lista-articulo>
+      <app-lista-articulo (articuloChanged)="articulo = $event"></app-lista-articulo>
     </div>
   </div>
 </div>

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ComunicationService } from '../comunication.service';
+import { Subscription }   from 'rxjs/Subscription';
 import { Articulo } from '../articulo';
 
 @Component({
@@ -8,16 +9,13 @@ import { Articulo } from '../articulo';
   styleUrls: ['./articulo.component.css']
 })
 export class ArticuloComponent implements OnInit {
-  public selected: Articulo;
+  @Input() selected: Articulo;
 
   constructor(private _service: ComunicationService) { 
      
   }
 
   ngOnInit() {
-    console.log(this.selected);
-    this.selected = this._service.getArticulo();
-    console.log(this.selected);
   }
 
 }

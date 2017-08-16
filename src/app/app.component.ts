@@ -18,5 +18,5 @@ export class AppComponent {
   constructor(private _service: ComunicationService){
     this.articulo = _service.getLastArticulo();
   }
-  title = 'Let\s Travel!';
+  title = 'Lorem Ipsum';
 }

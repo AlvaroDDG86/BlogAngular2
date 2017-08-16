@@ -21,24 +21,24 @@ export class ComunicationService {
      {titulo:'Artículo 1', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.', 
      comentarios :[
       { autor: 'Manolo', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: new Date(2017,5,18,20,30)}
-    ]},
+    ], autor: 'Julian Escribano', fecha: new Date(2017,1,1,20,0)},
      {titulo:'Artículo 2', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.', 
      comentarios :[
         { autor: 'Fermín', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: new Date(2015,6,8,19,30)},
         { autor: 'Germán', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: new Date(2016,2,4,10,13)},
         { autor: 'Luisa', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: new Date(2013,5,1,11,2)}
-      ]
+      ], autor: 'Fermín Palomares', fecha: new Date(2017,5,12,20,0)
     },
      {titulo:'Artículo 3', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',
      comentarios :[
         { autor: 'Teresa', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: new Date(2017,0,8,12,0)},
         { autor: 'Álvaro', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: new Date(2017,2,1,10,30)}
-      ]},
+      ], autor: 'Álvaro de Dios', fecha: new Date(2017,4,8,20,0)},
      {titulo:'Artículo 4', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.', 
     comentarios :[
         { autor: 'Jacinto', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: new Date(2013,5,18,20,30)},
         { autor: 'Lorena', contenido: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit, officia ipsum. Numquam praesentium doloremque assumenda molestiae dolorum, quam, possimus atque aperiam, repudiandae odio error vitae distinctio ipsa quisquam provident.',fecha: new Date(2014,6,8,10,30)}
-      ]
+      ], autor: 'Gerónimo Daltónico', fecha: new Date(2017,6,24,20,0)
     }];
 
   constructor() { 

@@ -1,17 +1,3 @@
-.titulo{
-    font-size: 5em;
-    color:orange;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    padding: 1em;
-    margin-top:0 !important; 
-    margin-bottom: 0;
-}
-#cabecera{
-    background: url(/assets/img/bg.jpg);
-    background-size:cover;
-    background-color: lightblue;
-}
 .navbar-default{
     background-color: lightseagreen !important;
 }

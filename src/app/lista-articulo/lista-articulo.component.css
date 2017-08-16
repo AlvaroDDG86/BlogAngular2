@@ -1,7 +1,8 @@
 .enlace{
-    color:blue !important;
+    padding: 0.4em;
+    color:white !important;
     cursor:pointer;
 }
 .lateral{
-    background-color: lightcyan;
+    background-color: lightseagreen;
 }

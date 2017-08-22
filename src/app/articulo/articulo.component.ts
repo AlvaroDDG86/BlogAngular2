@@ -1,7 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input,EventEmitter } from '@angular/core';
 import { ComunicationService } from '../comunication.service';
 import { Subscription }   from 'rxjs/Subscription';
 import { Articulo } from '../articulo';
+import { Comentario } from '../comentario';
 
 @Component({
   selector: 'app-articulo',
@@ -10,6 +11,10 @@ import { Articulo } from '../articulo';
 })
 export class ArticuloComponent implements OnInit {
   @Input() selected: Articulo;
+  comentarioNuevo = new EventEmitter<Comentario>();
+  contenido: string;
+  autor: string;
+  nuevoComentario: Comentario;
 
   constructor(private _service: ComunicationService) { 
      
@@ -19,6 +24,11 @@ export class ArticuloComponent implements OnInit {
   }
 
   agregarComentario(){
-    
+    this.nuevoComentario = {autor: this.autor, contenido: this.contenido, fecha:new Date()};
+    console.log(this.nuevoComentario);
+    this.comentarioNuevo.emit(this.nuevoComentario);
+    //this.selected.comentarios.push(this.nuevoComentario);
+    this.autor = "";
+    this.contenido = "";
   }
 }

@@ -1,6 +1,7 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input } from '@angular/core';
 import { ComunicationService } from '../comunication.service';
 import { Articulo } from '../articulo';
+import { Comentario } from '../comentario';
 
  
 
@@ -13,11 +14,13 @@ import { Articulo } from '../articulo';
 })
 
 export class ListaArticuloComponent implements OnInit {
+  @Input() nuevoComentario: Comentario;
+  @Input() nuevoArticulo: Articulo;
+  selected: Articulo;
   public articulos: Articulo[];
   articuloChanged = new EventEmitter<Articulo>();
   constructor(private _service: ComunicationService) {
     
-
   }
 
   ngOnInit() {
@@ -26,6 +29,7 @@ export class ListaArticuloComponent implements OnInit {
   }
 
   onSelect(articulo: Articulo){
+    this.selected = articulo;
     this.articuloChanged.emit(articulo);
   }
 }

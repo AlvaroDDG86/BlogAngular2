@@ -2,20 +2,15 @@
   <form>
     <div class="form-group">
       <label for="titulo">Título</label>
-      <input type="text" [(ngModel)]="articulo.titulo" class="form-control" id="titulo" >
+      <input type="text" [(ngModel)]="articulo.titulo" name="titulo" class="form-control" id="titulo"  placeholder="título" >
     </div>
-    {{texto}}
     <div class="form-group">
       <label for="contenido">Contenido</label>
-      <textarea rows="4" cols="50" class="form-control" id="contenido"></textarea>
+      <textarea rows="4" cols="50" [(ngModel)]="articulo.descripcion" name="descripcion" class="form-control" id="contenido" placeholder="contenido" ></textarea>
     </div>
     <div class="form-group">
       <label for="autor">Autor</label>
-      <input type="text" class="form-control" id="autor">
-    </div>
-    <div class="form-group">
-      <label for="fecha">Fecha</label>
-      <input type="text" class="form-control" id="fecha">
+      <input type="text" class="form-control" [(ngModel)]="articulo.autor" name="autor" id="autor" placeholder="autor">
     </div>
     <button type="button" class="btn btn-success" (click)="guardar()">Guardar</button>
   </form>

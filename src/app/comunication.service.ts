@@ -42,6 +42,7 @@ export class ComunicationService {
     }];
 
   constructor() { 
+    console.log("contructor");
   }
 
   getArticulos(){
@@ -56,5 +57,9 @@ export class ComunicationService {
 
   getListaSocial(){
     return this.social;
+  }
+
+  newArticulo(articulo:Articulo){
+    this.articulos.push(articulo);
   }
 }
